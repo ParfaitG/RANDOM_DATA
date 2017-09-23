@@ -49,6 +49,7 @@ On Error GoTo ErrHandle
     MsgBox "Successfully outputted csv files!", vbInformation
 
 ExitHandle:
+    Set new_wb = Nothing
     Exit Sub
 
 ErrHandle:
