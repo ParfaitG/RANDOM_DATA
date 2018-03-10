@@ -17,9 +17,9 @@ for i in range(1,11):
                        'NUM1': np.random.randn(50)*100,
                        'NUM2': np.random.randn(50),
                        'BOOL': [np.random.choice([True,False],1).item(0) for _ in range(50)],
-                       'DATE': [dt.datetime.fromtimestamp(np.random.randint(epoch_time)) for _ in range(50)]})
+                       'DATE': [dt.datetime.fromtimestamp(np.random.randint(epoch_time)) for _ in range(50)]},
+                      columns = ['ID','GROUP','DATE','NUM1','NUM2','BOOL'])
                        
-    df = df[['ID','GROUP','DATE','NUM1','NUM2','BOOL']]
     df.to_csv(os.path.join(cd, 'RandomData_PY_'+str(i)+'.csv'))
 
 
